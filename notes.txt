@@ -1,3 +1,8 @@
+git add -A 
+git commit -m 
+git status 
+git push origin master
+
 notes
 assets will load the css and js it will get loaded from layout application link 
 channels folder will work with application cable for chat app or messages  
@@ -17,4 +22,4 @@ readme.md (instructions for the application)
 .gitignore and .files dont show by default they are hidden files 
 ------------------------------------------------
 version control with Git when we make changes to code we make commit so basically saving with a message with info about the code 
-commit copies and save how the code looks so there is a commit history so if there is a mistake we can go back to an earlier version of the code git.scm.com lots of documentation
+commit copies and save how the code looks so there is a commit history so if there is a mistake we can go back to an earlier version of the code git.scm.com lots of documentation 
