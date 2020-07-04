@@ -12,6 +12,11 @@
 
   <body>
   <%=link_to 'home', root_path%>
+  <%# we can also say about_path %>
+   <%=link_to 'about', 'about'  %>
+   <%=link_to 'articles', '/articles'  %>
+   <%=link_to 'create article', '/articles/new'%>
+   <%=link_to 'view first article', article_path(1) %>
     <%= yield %>
   </body>
 </html>
