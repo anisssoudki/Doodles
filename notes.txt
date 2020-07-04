@@ -1,0 +1,20 @@
+notes
+assets will load the css and js it will get loaded from layout application link 
+channels folder will work with application cable for chat app or messages  
+controles folder -> house all controllers 
+helpers is for helper function or methods to help with our views
+js folder handled by webpack packs folder than js manifest file 
+models folder store all models inherite from active record 
+views folder includes layout folder and the rest of our views the yield code in application.html.erb will yield all our views
+
+bin folder (binary executable folder )
+confi(configuration for application->env defines development production exetera)(credentiels file can be used to accept api )
+routes.rb is in config and it defines our routes 
+db is to house the database and our migrations and schecmas 
+gem file for gems
+package.json lists the packages and dependencies using yarn
+readme.md (instructions for the application)
+.gitignore and .files dont show by default they are hidden files 
+------------------------------------------------
+version control with Git when we make changes to code we make commit so basically saving with a message with info about the code 
+commit copies and save how the code looks so there is a commit history so if there is a mistake we can go back to an earlier version of the code git.scm.com lots of documentation

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Doodles</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+<%# this below is refering to stylesheet application in app/assets/stylesheets/application.css %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# below refering to app/packs/application.js %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%=link_to 'home', root_path%>
+    <%= yield %>
+  </body>
+</html>
