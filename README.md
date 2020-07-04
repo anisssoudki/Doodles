@@ -1,5 +1,6 @@
 # README
-
+ this is only intended for practice its going to end up being a bogus website 
+ 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

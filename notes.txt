@@ -115,3 +115,78 @@ also an article.rb modul inherits from application record so its already set up 
 in config routes it generate the resources :articles command which provide all the crud routes 
 rails routes --expanded will give us a very nice reading view for the routes
 to check it rails routes || grep articles will show us all the articles 
+
+The line resources :articles in the config/routes.rb file provides the following routes:
+
+- index of articles (GET request)
+
+- new article (GET)
+
+- create article (POST)
+
+- edit article (GET)
+
+- update article (PUT and PATCH)
+
+- show article (GET)
+
+- delete article (DELETE)
+
+From UI perspective ->
+
+- index lists all the articles in the articles table in the database of the app
+
+- new article deals with the form to enter in new article details
+
+- create handles the submission of the items in the new article form
+
+- edit article deals with the form to enter edited information for an existing article
+
+- update article deals with the submission of the edit article form
+
+- show article displays an individual article based on selection
+
+- delete article deletes an article from the articles table
+
+-----------------------------------------
+now i will manually generate article but instead going to name it something different maybe blog 
+instead of using scafflod i will either generate it using controller or resource and manually write everything in 
+as practice/ this is only intended for practice its going to end up being a bogus website 
+
+model name: singular (blog)
+blog model file name: blog.br snake case singular 
+blog model class name: Blog capitalized (class name are capitalized follow camel case convention)
+table name: blogs plural as in blogs table 
+
+------------------------------------------------------------------------------
+rails generate migration create_blogs
+->invoke  active_record
+      create    db/migrate/20200704223233_create_blogs.rb
+      add attributes than -> rails db:migrate to run the migration 
+      we can add new attributes by generating a new migration if we forgot or we need to update a table 
+
+rails generate migration add_description_to_blogs
+generates invoke  active_record
+      create    db/migrate/20200704224030_add_description_ 
+      now we can go on that migration file and add what we need 
+      run the migration rails db:migrate than we will get this
+       add_column(:blogs, :description, :text)
+   -> 0.0028s
+== 20200704224030 AddDescriptionToBlogs: migrated (0.0036s
+check the schema to make sure its added.
+------------------------------------------------------------
+we can make a model file called blog.rb in it inherite from the application record (this model gives us getters and setters because of the inheritance from application record)
+we can drop to the rails console rails c and test the connection to the database
+ Blog.all
+   (0.5ms)  SELECT sqlite_version(*)
+  Blog Load (0.2ms)  SELECT "blogs".* FROM "blogs" LIMIT ?  
+[["LIMIT", 11]]
+
+--> authentication of our blog module right now we can create empty blogs so to prevent this we are going to use validations or constraints using the model file to enforce what can go into the database
+# another validation we wanna add is uselessness of blogs so we can enforce minimum length requirment for title and description
+
+https://guides.rubyonrails.org/active_record_validations.html
+
+------------------------------------------------
+add the routes in the config we can use resources :blogs
+if we restrict some routes we use resources :blogs , only: [:show]
