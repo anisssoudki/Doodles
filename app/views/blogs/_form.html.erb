@@ -1,0 +1,26 @@
+
+<%# form_with scope: ():our-model), submits to using (url:) than the path local will override the ajax functionality  %>
+<% if @blog.errors.any? %>
+<h2>The following errors prevented the blog of being saved </h2>
+<ul>
+<%@blog.errors.full_messages.each do |message|%>
+    <li>
+        <%=message%>
+    </li>
+</ul>
+<%end%>
+<%end%>
+<%= form_with scope: :blog, url: blogs_path, local: true do |f|%>
+<p> 
+<%=f.label :title%><br>
+<%=f.text_field :title%>
+</p>
+
+<p>
+<%=f.label :description%><br>
+<%=f.text_area :description, cols: "50", rows: "25"%>
+</p>
+
+<p>
+<%=f.submit%>
+<%end%>

@@ -1,0 +1,13 @@
+
+<h1>Blogs link page</h1>
+<h3>Click on article link to display that spesific link</h3>
+<%@blogs.each do |blog|%>
+<li>
+
+<%=link_to blog.title, blog_path(blog.id)%> to delete click destroy
+<button class="btn btn-danger">
+<%= link_to  'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+</button>
+</li>
+
+<%end%>

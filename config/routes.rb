@@ -7,7 +7,7 @@ root 'pages#home'
 get 'about', to: 'pages#about'
 # now we have to create that in the views/pages and add it in the controller other wise we get an unknow action error from the controller as well as a template not found error in the views/pages no template found 
 
-resources :blogs , only: [:show]
+resources :blogs 
 
 
 

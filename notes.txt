@@ -190,3 +190,14 @@ https://guides.rubyonrails.org/active_record_validations.html
 ------------------------------------------------
 add the routes in the config we can use resources :blogs
 if we restrict some routes we use resources :blogs , only: [:show]
+----------------------- 
+added index and made links in the index blogs views 
+
+added new and create in routes and def in controller and made the form
+
+https://guides.rubyonrails.org/form_helpers.html
+
+this guide is for rendering forms 
+form_with uses ajax https://en.wikipedia.org/wiki/Ajax_(programming) read up on ajax
+
+added flash messages for blog creation if valid that it will notify with a flash message if not than it wil display the restrictions for the user

@@ -16,7 +16,13 @@
    <%=link_to 'about', 'about'  %>
    <%=link_to 'articles', '/articles'  %>
    <%=link_to 'create article', '/articles/new'%>
-   <%=link_to 'view first article', article_path(1) %>
+   <br><br><br>
+   <h3>
+   <%=link_to 'create blogs', '/blogs/new'%>
+   </h3>
+   <%flash.each do |name, msg|%>
+   <%=msg%>
+   <%end%>
     <%= yield %>
   </body>
 </html>
